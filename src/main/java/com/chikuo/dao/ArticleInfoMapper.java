@@ -2,9 +2,12 @@ package com.chikuo.dao;
 
 import com.chikuo.entity.ArticleInfo;
 import com.chikuo.entity.ArticleInfoExample;
+import org.apache.ibatis.annotations.Mapper;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
-
+@Mapper
+@Repository
 public interface ArticleInfoMapper {
     int deleteByPrimaryKey(Long id);
 

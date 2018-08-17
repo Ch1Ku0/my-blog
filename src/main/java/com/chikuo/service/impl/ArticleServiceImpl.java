@@ -5,7 +5,6 @@ import com.chikuo.dto.ArticleDto;
 import com.chikuo.dto.ArticleWithPictureDto;
 import com.chikuo.entity.*;
 import com.chikuo.service.ArticleService;
-import com.chikuo.dao.ArticleInfoMapper;
 import com.chikuo.entity.ArticleInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -21,7 +20,7 @@ import java.util.*;
 public class ArticleServiceImpl implements ArticleService {
 
 	@Autowired
-    ArticleInfoMapper articleInfoMapper;
+	ArticleInfoMapper articleInfoMapper;
 	@Autowired
 	ArticlePictureMapper articlePictureMapper;
 	@Autowired
@@ -30,6 +29,8 @@ public class ArticleServiceImpl implements ArticleService {
 	ArticleContentMapper articleContentMapper;
 	@Autowired
 	CategoryInfoMapper categoryInfoMapper;
+
+
 
 	private static byte MAX_LASTEST_ARTICLE_COUNT = 5;
 

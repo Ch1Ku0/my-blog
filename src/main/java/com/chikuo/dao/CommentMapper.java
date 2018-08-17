@@ -2,9 +2,12 @@ package com.chikuo.dao;
 
 import com.chikuo.entity.Comment;
 import com.chikuo.entity.CommentExample;
+import org.apache.ibatis.annotations.Mapper;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
-
+@Mapper
+@Repository
 public interface CommentMapper {
     int deleteByPrimaryKey(Long id);
 

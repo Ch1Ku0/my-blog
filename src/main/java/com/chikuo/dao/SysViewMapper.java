@@ -2,9 +2,12 @@ package com.chikuo.dao;
 
 import com.chikuo.entity.SysView;
 import com.chikuo.entity.SysViewExample;
+import org.apache.ibatis.annotations.Mapper;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
-
+@Mapper
+@Repository
 public interface SysViewMapper {
     int deleteByPrimaryKey(Long id);
 

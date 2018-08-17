@@ -1,6 +1,8 @@
 package com.chikuo.intercepter;
 
-import com.chikuo.service.impl.SysService;
+import com.chikuo.entity.SysLog;
+import com.chikuo.entity.SysView;
+import com.chikuo.service.SysService;
 import com.chikuo.util.BrowserUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.StringUtils;

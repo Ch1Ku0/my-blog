@@ -1,5 +1,6 @@
 package com.chikuo.intercepter;
 
+import com.chikuo.entity.User;
 import org.springframework.web.servlet.HandlerInterceptor;
 
 import javax.servlet.http.HttpServletRequest;
@@ -16,22 +17,22 @@ public class BackInterceptor implements HandlerInterceptor {
      */
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         boolean flag = true;
-        User user = (User) request.getSession().getAttribute("user");
-        if(null == user) {
-            // 如果用户为空则跳转到error页面
-            // 目的是保证地址栏不改变（与前台错误页面响应一致），这样用户就不知道后台页面的地址
-            request.getRequestDispatcher(request.getContextPath() + "/error.html").forward(request, response);
-            flag = false;
-
-        } else {
-            // 对用户账号进行验证,是否正确
-            if(user.getUsername().equals(username) && user.getPassword().equals((password))) {
-                System.out.println("访问后台API");
-                flag = true;
-            } else {
-                flag = false;
-            }
-        }
-        return flag;
+//        User user = (User) request.getSession().getAttribute("user");
+//        if(null == user) {
+//            // 如果用户为空则跳转到error页面
+//            // 目的是保证地址栏不改变（与前台错误页面响应一致），这样用户就不知道后台页面的地址
+//            request.getRequestDispatcher(request.getContextPath() + "/error.html").forward(request, response);
+//            flag = false;
+//
+//        } else {
+//            // 对用户账号进行验证,是否正确
+//            if(user.getUsername().equals(username) && user.getPassword().equals((password))) {
+//                System.out.println("访问后台API");
+//                flag = true;
+//            } else {
+//                flag = false;
+//            }
+//        }
+        return true;
     }
 }

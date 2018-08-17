@@ -2,9 +2,12 @@ package com.chikuo.dao;
 
 import com.chikuo.entity.SysLog;
 import com.chikuo.entity.SysLogExample;
+import org.apache.ibatis.annotations.Mapper;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
-
+@Mapper
+@Repository
 public interface SysLogMapper {
     int deleteByPrimaryKey(Long id);
 
